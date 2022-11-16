@@ -25,11 +25,12 @@ class ElerhetosegE(Enum):
 
 
 class Alkalmazott:
-    def __init__(self,Id,nev,kor,nem,munkaviszony,elerhetoseg):
+    def __init__(self,Id,nev,kor,nem,szak,munkaviszony,elerhetoseg):
         self.Id = Id
         self.Nev = nev
         self.Kor = kor
         self.Nem = nem
+        self.Szak = szak
         self.Mv = munkaviszony
         self.El = elerhetoseg
         
@@ -56,6 +57,10 @@ class Alkalmazott:
         if self.El == ElerhetosegE.TELEFON:
             t = random.randint(1000000,9999999)
             print('06 30',t)
+            
+        # ide csak csináltam random cuccokat xd
+        # meg lehet változtatni
+        
         if self.El == ElerhetosegE.EMAIL and self.Nev == NevE.JOZSEF:
             print('jozsika123@gmail.com')
         if self.El == ElerhetosegE.EMAIL and self.Nev == NevE.GEZA:
